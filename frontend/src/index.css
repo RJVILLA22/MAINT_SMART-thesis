@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+
+@theme {
+    /* 
+        Colors
+        examples of use: text-primary, bg-white
+    */
+    --color-primary: #00369C;
+    --color-secondary: #ECF3FF;
+    --color-white: #F9F9FB;
+    --color-black: #1D2939;
+    --color-error: #C80808;
+    --color-warning: #FFC964;
+    --color-success: #27AE60;
+    --color-hover: #437BE4;
+    --color-on-click: #082762;
+    --color-disabled: #DDDDDD;
+    --color-whitey: #FFFFFF;
+    --color-bg-disabled: #EFF2F5;
+    --color-neutral-c: #788EAB;
+
+    --color-bg-admin: #F9F9FB --color-gray: #5D5D5D --color-neutral-500: #495B74 --color-neutral-400: #788EAB --color-neutral-300: #B7C2D2 --color-neutral-200: #D6DDE5 --color-neutral-100: #EFF2F5
+        /* 
+        Fonts 
+        examples of use: font-satoshi-regular, font-satoshi-italic
+    */
+        --font-satoshi-variable: 'Satoshi-Variable', sans-serif;
+    --font-satoshi-variable-italic: 'Satoshi-VariableItalic', sans-serif;
+    --font-satoshi-light: 'Satoshi-Light', sans-serif;
+    --font-satoshi-light-italic: 'Satoshi-LightItalic', sans-serif;
+    --font-satoshi-regular: 'Satoshi-Regular', sans-serif;
+    --font-satoshi-italic: 'Satoshi-Italic', sans-serif;
+    --font-satoshi-medium: 'Satoshi-Medium', sans-serif;
+    --font-satoshi-medium-italic: 'Satoshi-MediumItalic', sans-serif;
+    --font-satoshi-bold: 'Satoshi-Bold', sans-serif;
+    --font-satoshi-bold-italic: 'Satoshi-BoldItalic', sans-serif;
+    --font-satoshi-black: 'Satoshi-Black', sans-serif;
+    --font-satoshi-black-italic: 'Satoshi-BlackItalic', sans-serif;
+}
+
+/* In your global CSS file */
+@layer utilities {
+
+    /* Satoshi as defualt font */
+    html {
+        font-family: 'Satoshi', sans-serif;
+    }
+
+    .scrollbar-blue::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .scrollbar-blue::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scrollbar-blue::-webkit-scrollbar-thumb {
+        background-color: #00369C;
+        /* Tailwind's blue-500 */
+        border-radius: 6px;
+        border: 2px solid transparent;
+        background-clip: content-box;
+    }
+
+    .scrollbar-blue::-webkit-scrollbar-thumb:hover {
+        background-color: #00369C;
+    }
+
+    .scrollbar-left {
+        direction: rtl;
+        padding-left: 8px;
+    }
+
+    .scrollbar-left>* {
+        direction: ltr;
+    }
+
+    .scrollbar-left::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .scrollbar-left::-webkit-scrollbar-thumb {
+        background-color: #00369C;
+        border-radius: 9999px;
+        border: 3px solid transparent;
+        /* creates spacing within scrollbar thumb */
+        background-clip: content-box;
+        margin-left: 8px;
+        /* extra spacing (though not standard, works in some setups) */
+    }
+
+    .scrollbar-left::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+
+
+
+}
+
+@keyframes rotateStar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Clean minimal scrollbar */
+.thin-scrollbar {
+    scrollbar-width: thin;
+    /* Firefox */
+    scrollbar-color: #cbd5e1 transparent;
+    /* thumb color, track color */
+}
+
+/* Chrome, Edge, Safari */
+.thin-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    /* horizontal scrollbar height */
+    width: 6px;
+    /* vertical scrollbar width */
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    /* Track background */
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    /* Thumb color (Tailwind slate-300-ish) */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    /* Adds padding inside thumb */
+}

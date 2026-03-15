@@ -1,0 +1,11 @@
+# Ignore all generated Firebase options files anywhere in the project
+**/firebase_options.dart
+
+# If you have environment-specific Firebase configs
+**/firebase_options_*.dart
+
+# Optionally ignore your service account or API key files
+**/google-services.json
+**/GoogleService-Info.plist
+**/.firebaserc
+**/firebase.json
